@@ -1,0 +1,25 @@
+create table survey(
+	id int AUTO_INCREMENT,
+    studentId int NOT NULL,
+    firstName varchar(255) NOT NULL,
+    lastName varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    phone varchar(14),
+    tutoring varchar(255),
+    healthAndWellness tinyint NOT NULL DEFAULT 0,
+    financialAidAndLiteracy tinyint NOT NULL DEFAULT 0,
+    disabilityServices tinyint NOT NULL DEFAULT 0,
+    careerExplorationPlanning tinyint NOT NULL DEFAULT 0,
+    acedemicCoaching tinyint NOT NULL DEFAULT 0,
+    trioClub tinyint NOT NULL DEFAULT 0,
+    studyAid tinyint NOT NULL DEFAULT 0,
+    other text,
+    PRIMARY KEY(id),
+    CONSTRAINT  unique_studentId UNIQUE(studentId)   
+) ENGINE =INNODB;
+
+
+
+#Example Insert query MYSQL
+
+INSERT INTO `survey` (`id`, `studentId`, `firstName`, `lastName`, `email`, `phone`, `tutoring`, `healthAndWellness`, `financialAidAndLiteracy`, `disabilityServices`, `careerExplorationPlanning`, `acedemicCoaching`, `trioClub`, `studyAid`, `other`) VALUES (NULL, '1', 'James', 'Bell', 'bell@bell.com', '555-555-5555', 'Intro', '1', '0', '1', '0', '1', '1', '1', 'I need help with everything');

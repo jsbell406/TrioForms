@@ -1,0 +1,20 @@
+﻿CREATE TABLE Survey(
+	SurveyId INT NOT NULL IDENTITY(1,1),
+    StudentId INT NOT NULL,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Phone VARCHAR(14),
+    Tutoring VARCHAR(255),
+    HealthAndWellness BIT NOT NULL DEFAULT 0,
+    FinancialAidAndLiteracy BIT NOT NULL DEFAULT 0,
+    DisabilityServices BIT NOT NULL DEFAULT 0,
+    CareerExplorationPlanning BIT NOT NULL DEFAULT 0,
+    AcademicCoaching BIT NOT NULL DEFAULT 0,
+    TrioClub BIT NOT NULL DEFAULT 0,
+    StudyAid BIT NOT NULL DEFAULT 0,
+    Other TEXT,
+    IsProcessed BIT NOT NULL DEFAULT 0,
+    PRIMARY KEY(SurveyId),
+    CONSTRAINT  unique_StudentId UNIQUE(studentId)   
+) 
